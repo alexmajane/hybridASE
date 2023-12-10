@@ -1,0 +1,13 @@
+{
+    "salmon_version": "1.5.2",
+    "index": "/data/acmajane/salmon/sim/salmon_index",
+    "libType": "A",
+    "mates1": "sim_1_r1.fq.gz",
+    "mates2": "sim_1_r2.fq.gz",
+    "validateMappings": [],
+    "seqBias": [],
+    "rangeFactorizationBins": "4",
+    "gcBias": [],
+    "output": "sim_1_quant_v2",
+    "auxDir": "aux_info"
+}

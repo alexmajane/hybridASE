@@ -1,0 +1,22 @@
+{
+    "read_files": "[ sim_1_r1.fq.gz, sim_1_r2.fq.gz]",
+    "expected_format": "IU",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 17430730,
+    "num_assigned_fragments": 17430730,
+    "num_frags_with_concordant_consistent_mappings": 16927071,
+    "num_frags_with_inconsistent_or_orphan_mappings": 519821,
+    "strand_mapping_bias": 0.5035188308715666,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 8523099,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 8403972,
+    "SF": 300028,
+    "SR": 219793,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

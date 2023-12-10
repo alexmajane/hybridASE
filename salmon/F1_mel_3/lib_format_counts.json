@@ -1,0 +1,22 @@
+{
+    "read_files": "[ /data/acmajane/hybrid_AG/hybrid_3_mel_v3_r1.fq.gz, /data/acmajane/hybrid_AG/hybrid_3_mel_v3_r2.fq.gz]",
+    "expected_format": "IU",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 7181262,
+    "num_assigned_fragments": 7181262,
+    "num_frags_with_concordant_consistent_mappings": 6895440,
+    "num_frags_with_inconsistent_or_orphan_mappings": 303955,
+    "strand_mapping_bias": 0.516030594131774,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 3558258,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 3337182,
+    "SF": 157159,
+    "SR": 146796,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

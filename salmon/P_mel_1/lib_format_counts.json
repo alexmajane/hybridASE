@@ -1,0 +1,22 @@
+{
+    "read_files": "[ mel_1_r1.fq.gz, mel_1_r2.fq.gz]",
+    "expected_format": "IU",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 19606872,
+    "num_assigned_fragments": 19606872,
+    "num_frags_with_concordant_consistent_mappings": 19060211,
+    "num_frags_with_inconsistent_or_orphan_mappings": 580256,
+    "strand_mapping_bias": 0.503950087436073,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 9605395,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 9454816,
+    "SF": 317371,
+    "SR": 262885,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}
