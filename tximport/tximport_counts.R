@@ -1,5 +1,5 @@
-# BiocManager::install("tximport")
-# BiocManager::install("DESeq2")
+libary(tximport)
+libary(DESeq2)
 
 # create sample reference table 
 samples <- data.frame(
@@ -12,7 +12,6 @@ samples <- data.frame(
         "F1_sim_1", "F1_sim_2", "F1_sim_3")
       ) %>% setNames(c("gen", "species", "cond", "sample"))
 
-setwd("~/Documents/Begun/hybrid/")
 
 # list of salmon quant files
 files_mel <- file.path("salmon", samples$sample[c(1:3,7:9)], "quant.sf")

@@ -1,5 +1,3 @@
-setwd("~/Documents/Begun/hybrid/sequence_analysis/")
-
 mel_index <- read.table("mel_ortho_CDS.tsv")
 sim_index <- read.table("sim_ortho_CDS.tsv")
 

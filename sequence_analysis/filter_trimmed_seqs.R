@@ -1,12 +1,11 @@
-untrimmed500 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/mel.500.tsv")
-  trimmed500 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/mel.500.notranscriptbut3UTR.tsv")
+untrimmed500 <- read.table("mel.500.tsv")
+trimmed500 <- read.table("mel.500.notranscriptbut3UTR.tsv")
 
-untrimmed750 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/mel.750.tsv")
-  trimmed750 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/mel.750.notranscriptbut3UTR.tsv")
+untrimmed750 <- read.table("mel.750.tsv")
+trimmed750 <- read.table("mel.750.notranscriptbut3UTR.tsv")
 
-untrimmed1000 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/mel.1k.tsv")
-  trimmed1000 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/mel.1k.notranscriptbut3UTR.tsv")
-
+untrimmed1000 <- read.table("mel.1k.tsv")
+trimmed1000 <- read.table("mel.1k.notranscriptbut3UTR.tsv")
 trimmed500 %<>% mutate(len = V5 - V4)
 trimmed750 %<>% mutate(len = V5 - V4)
 trimmed1000 %<>% mutate(len = V5 - V4)
@@ -86,10 +85,9 @@ trimmed750.filtered$attr  <- paste0("gene_id \"", trimmed750.filtered$attr, "\";
 trimmed1000.filtered$attr <- paste0("gene_id \"", trimmed1000.filtered$attr, "\";")
 
 ## write out finalized filtered gtfs and bed files
-write.table(trimmed500.filtered[,1:9],  "~/Documents/Begun/hybrid/sequence_analysis/mel.500.trimmed.filtered.gtf",  sep = "\t", quote = F, row.names = F, col.names = F)
-write.table(trimmed750.filtered[,1:9],  "~/Documents/Begun/hybrid/sequence_analysis/mel.750.trimmed.filtered.gtf",  sep = "\t", quote = F, row.names = F, col.names = F)
-write.table(trimmed1000.filtered[,1:9], "~/Documents/Begun/hybrid/sequence_analysis/mel.1000.trimmed.filtered.gtf", sep = "\t", quote = F, row.names = F, col.names = F)
-
-write.table(trimmed500.filtered.bed,  "~/Documents/Begun/hybrid/sequence_analysis/mel.500.trimmed.filtered.bed",  sep = "\t", quote = F, row.names = F, col.names = F)
-write.table(trimmed750.filtered.bed,  "~/Documents/Begun/hybrid/sequence_analysis/mel.750.trimmed.filtered.bed",  sep = "\t", quote = F, row.names = F, col.names = F)
-write.table(trimmed1000.filtered.bed, "~/Documents/Begun/hybrid/sequence_analysis/mel.1000.trimmed.filtered.bed", sep = "\t", quote = F, row.names = F, col.names = F)
+write.table(trimmed500.filtered[,1:9],  "mel.500.trimmed.filtered.gtf",  sep = "\t", quote = F, row.names = F, col.names = F)
+write.table(trimmed750.filtered[,1:9],  "mel.750.trimmed.filtered.gtf",  sep = "\t", quote = F, row.names = F, col.names = F)
+write.table(trimmed1000.filtered[,1:9], "mel.1000.trimmed.filtered.gtf", sep = "\t", quote = F, row.names = F, col.names = F)
+write.table(trimmed500.filtered.bed,  "mel.500.trimmed.filtered.bed",  sep = "\t", quote = F, row.names = F, col.names = F)
+write.table(trimmed750.filtered.bed,  "mel.750.trimmed.filtered.bed",  sep = "\t", quote = F, row.names = F, col.names = F)
+write.table(trimmed1000.filtered.bed, "mel.1000.trimmed.filtered.bed", sep = "\t", quote = F, row.names = F, col.names = F)

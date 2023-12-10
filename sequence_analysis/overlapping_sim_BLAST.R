@@ -1,6 +1,6 @@
-intersect_500 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/sim.500.intersect.formatted.tsv")
-intersect_750 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/sim.750.intersect.formatted.tsv")
-intersect_1000 <- read.table("~/Documents/Begun/hybrid/sequence_analysis/sim.1000.intersect.formatted.tsv")
+intersect_500 <- read.table("sim.500.intersect.formatted.tsv")
+intersect_750 <- read.table("sim.750.intersect.formatted.tsv")
+intersect_1000 <- read.table("sim.1000.intersect.formatted.tsv")
 
 intersect_500 <- intersect_500[,c(1,4,5,7,10,13,16,17,19,22,25)]
 intersect_750 <- intersect_750[,c(1,4,5,7,10,13,16,17,19,22,25)]
@@ -66,6 +66,6 @@ table(intersect_1000_genes %in% intersect_750_genes)
 # are not found in the smaller set. This could be because the sequences overlap in 
 # a relatively small area in the longer sequence set but a bigger proportion in the smaller sequence set
 
-write.table(intersect_500_genes, "~/Documents/Begun/hybrid/sequence_analysis/overlapping_sim_500_blacklist", col.names = F, row.names = F, quote = F)
-write.table(intersect_750_genes, "~/Documents/Begun/hybrid/sequence_analysis/overlapping_sim_750_blacklist", col.names = F, row.names = F, quote = F)
-write.table(intersect_1000_genes, "~/Documents/Begun/hybrid/sequence_analysis/overlapping_sim_1000_blacklist", col.names = F, row.names = F, quote = F)
+write.table(intersect_500_genes, "overlapping_sim_500_blacklist", col.names = F, row.names = F, quote = F)
+write.table(intersect_750_genes, "overlapping_sim_750_blacklist", col.names = F, row.names = F, quote = F)
+write.table(intersect_1000_genes, "overlapping_sim_1000_blacklist", col.names = F, row.names = F, quote = F)

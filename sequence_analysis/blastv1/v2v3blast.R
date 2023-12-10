@@ -1,5 +1,5 @@
-blastv2 <- read.table("Documents/Begun/hybrid/sequence_analysis/blast/dmel_500_dsimv2.tsv")
-blastv3 <- read.table("Documents/Begun/hybrid/sequence_analysis/blast/dmel_500_dsimv3.tsv")
+blastv2 <- read.table("blast/dmel_500_dsimv2.tsv")
+blastv3 <- read.table("blast/dmel_500_dsimv3.tsv")
 
 # remove all but the top hit
 blastv2.top <- blastv2[!duplicated(blastv2$V1),]
@@ -66,8 +66,8 @@ summary(subset(blast_stats, eval.diff != 0)$eval.diff)
 ###################################
 
 # default gap open/gap extend of 5/2 (above) vs looser costs of 2/1
-blastv2_21 <- read.table("Documents/Begun/hybrid/sequence_analysis/blast/dmel_500_dsimv2_OE21.tsv")
-blastv3_21 <- read.table("Documents/Begun/hybrid/sequence_analysis/blast/dmel_500_dsimv3_OE21.tsv")
+blastv2_21 <- read.table("blast/dmel_500_dsimv2_OE21.tsv")
+blastv3_21 <- read.table("blast/dmel_500_dsimv3_OE21.tsv")
 
 # summarize distribution of number of  hits per gene 
 hitsv2 <- table(count(blastv2$V1)[,2])
@@ -109,8 +109,8 @@ summary(blastv3_21.top$V4)
 # so we do see some improvement in candidate transcript lengths!
 
 # other param variants
-blastv3_31 <- read.table("Documents/Begun/hybrid/sequence_analysis/blast/dmel_500_dsimv3_OE31.tsv")
-blastv3_32 <- read.table("Documents/Begun/hybrid/sequence_analysis/blast/dmel_500_dsimv3_OE32.tsv")
+blastv3_31 <- read.table("blast/dmel_500_dsimv3_OE31.tsv")
+blastv3_32 <- read.table("blast/dmel_500_dsimv3_OE32.tsv")
 
 hitsv3.31 <- table(count(blastv3_31$V1)[,2])
 hitsv3.32 <- table(count(blastv3_32$V1)[,2])
@@ -136,7 +136,7 @@ singlets <- hitcounts[hitcounts$freq == 1,]$x
 doublets <- hitcounts[hitcounts$freq == 2,]$x
 triplets <- hitcounts[hitcounts$freq == 3,]$x
 
-mel_sim_ortho <- fread("~/Documents/Begun/hybrid/tximport/simV3/ortho_MS_1to1_v3filtered.tsv", header = F) %>% setNames(c("mel", "symbol", "sim"))
+mel_sim_ortho <- fread("tximport/simV3/ortho_MS_1to1_v3filtered.tsv", header = F) %>% setNames(c("mel", "symbol", "sim"))
 table(mel_sim_ortho$mel %in% singlets)
 # FALSE  TRUE 
 # 1247 11039 
@@ -147,7 +147,7 @@ table(mel_sim_ortho$mel %in% triplets)
 # FALSE  TRUE 
 # 12247    39 
 
-sfps <- read.table("~/Documents/Begun/acp_annotation/wigby2020")
+sfps <- read.table("acp_annotation/wigby2020")
 table(sfps$V3 %in% singlets)
 # FALSE  TRUE 
 #    37   255 

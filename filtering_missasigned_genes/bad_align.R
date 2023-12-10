@@ -4,7 +4,6 @@ library(dplyr)
 library(plyr)
 library(tibble)
 library(ggplot2)
-setwd("~/Documents/Begun/hybrid/bad_align_counts/")
 
 counts_missassigned_mel <- cbind(fread("mel_1_missassigned.tab"),
                                  fread("mel_2_missassigned.tab")[,2],
@@ -43,7 +42,7 @@ counts_missassigned_unique_mel$gene <- mel_sim_ortho$mel[match(
 # relative size effect of missassigned counts vs correctly assigned
 
 # get the parent counts
-counts <- read.table("~/Documents/Begun/hybrid/hybrid_counts.tsv", )
+counts <- read.table("../rna_seq_data/hybrid_counts.tsv", )
 counts %<>% round()
 counts %<>% rownames_to_column("gene")
 counts <- counts[,c(1:4,8:10)] # remove hybrid counts
